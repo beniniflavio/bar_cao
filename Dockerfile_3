@@ -1,0 +1,2 @@
+FROM node:latest as angular
+WORKDIR /app

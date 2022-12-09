@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  barcao:
+    image: barcao/api
+    restart: always
+    build: .
+    ports:
+      - 8089:3000

@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-6 col-sm-3" routerLink="/Consumo/Mesa/{{wrapperMesa.msgSaida[0].mesa.id}}">{{wrapperMesa.msgSaida[0].mesa.identificacao}} </div>
+      <div class="col-6 col-sm-3 adcionar">
+        <button type="button" class="btn btn-dark"
+          routerLink="/Consumo/Mesa/Grupo/{{wrapperMesa.msgSaida[0].mesa.id}}">
+          <i class="bi bi-cart-plus"></i></button>
+
+          <button type="button" class="btn btn-dark"
+          routerLink="/Consumo/Mesa/{{wrapperMesa.msgSaida[0].mesa.id}}">
+          <i class="bi bi-arrow-left-square"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Selecione o grupo</h5>
+    <ul class="list-group" *ngFor="let grupo of wrapper.msgSaida[0]">
+      <li class="list-group-item" routerLink="/Consumo/Mesa/{{id}}/{{ grupo.id}}">{{ grupo.descricao }}</li>
+    </ul>
+  </div>
+</div>

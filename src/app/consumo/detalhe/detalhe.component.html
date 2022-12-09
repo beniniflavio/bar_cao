@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-6 col-sm-3" routerLink="/Consumo/Mesa/{{ wrapper.msgSaida[0].consumo.mesa.id }}">
+        {{ wrapper.msgSaida[0].consumo.mesa.identificacao}}
+      </div>
+      <div class="col-6 col-sm-3 adcionar">
+        <button
+          type="button"
+          class="btn btn-dark"
+          routerLink="/Consumo/Mesa/Grupo/{{ wrapper.msgSaida[0].consumo.mesa.id }}">
+          <i class="bi bi-cart-plus"></i>
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-dark"
+          routerLink="/Consumo/Mesa/{{ wrapper.msgSaida[0].consumo.mesa.id }}"
+        >
+          <i class="bi bi-arrow-left-square"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <div class="row">
+        <div class="col-6 col-sm-3 display-6 text-nowrap">{{ wrapper.msgSaida[0].consumo.mercadoria.nome }}</div>
+        <div class="col-6 col-sm-3 text-end display-6">
+          R{{wrapper.msgSaida[0].consumo.valor | currency }}
+        </div>
+      </div>
+    </h5>
+
+
+    <ng-container *ngIf="wrapper.msgSaida[0].componentes.length == 0">
+      <div class="alert alert-warning text-center" role="alert">
+        Sem componentes
+      </div>
+    </ng-container>
+    <ng-container *ngIf="wrapper.msgSaida[0].componentes.length != 0 ">
+    <span class="h6 subtitulo text-center">Componentes:</span>
+
+    <ul class="list-group " *ngFor="let componente of wrapper.msgSaida[0].componentes">
+      <li class="list-group-item" (click)="setComponente(componente.id )">
+        <div class="row ">
+          <div class="col-6 col-sm-3 h6">{{componente.descricao }} </div>
+          <div class="col-6 col-sm-3 text-end h3">
+            <span class="badge bg-primary rounded-pill text-end" >{{componente.quantidade}} </span></div>
+        </div>
+      </li>
+    </ul>
+  </ng-container>
+
+    <ng-container *ngIf="wrapper.msgSaida[0].adicionais.length != 0 ">
+        <span class="h6 subtitulo text-center">Adicionais</span>
+        <ul class="list-group" *ngFor="let adicional of wrapper.msgSaida[0].adicionais">
+          <li class="list-group-item h-50" >
+            <div class="row ">
+              <div class="col-7 col-sm-3 h6 text-start">{{adicional.descricao }} R{{adicional.valor | currency }}</div>
+              <div class="col-5 col-sm-3 text-end h3">
+                <span class="badge bg-primary rounded-pill text-end" (click)="setAdcionalRetirar(adicional.id )" > -</span>
+                <span class="badge bg-primary rounded-pill text-end" >{{adicional.quantidade}} </span>
+                <span class="badge bg-primary rounded-pill text-end" (click)="setAdcional(adicional.id )" > + </span>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </ng-container>
+      <ng-container *ngIf="success != 0 ">
+        <div class="alert alert-success" role="alert">
+          A simple success alert—check it out!
+        </div>
+      </ng-container>
+      <ng-container *ngIf="success == 0 ">      
+          <div class="d-grid gap-2">
+          <button class="btn btn-primary confirmar" type="button" (click)="atualizar()">Confirmar</button>
+        </div>
+      </ng-container>
+  </div>
+</div>

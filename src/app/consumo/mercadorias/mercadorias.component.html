@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-6 col-sm-3">{{wrapperMesa.msgSaida[0].mesa.identificacao}}</div>
+      <div class="col-6 col-sm-3 adcionar">
+        <button type="button" class="btn btn-dark"
+          routerLink="/Consumo/Mesa/Grupo/{{wrapperMesa.msgSaida[0].mesa.id}}">
+          <i class="bi bi-cart-plus"></i></button>
+          <button type="button" class="btn btn-dark"          >
+          <i class="bi bi-arrow-left-square"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{wrapperGrupo.msgSaida[0].descricao}}</h5>
+    <ul class="list-group" *ngFor="let mercadoria of wrapperMercadorias.msgSaida[0]">
+      <li class="list-group-item" routerLink="/Consumir/{{idhashMesa}}/{{ mercadoria.id}}">
+        <div class="row">
+          <div class="col-8 col-sm-3" >{{mercadoria.nome}}</div>
+          <div class="col-4 col-sm-3 text-end">R{{mercadoria.valor | currency}}</div>
+        </div>
+        </li>
+    </ul>
+  </div>
+</div>

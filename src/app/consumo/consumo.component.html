@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-6 col-sm-3">{{wrapperConsumo.msgSaida[0].mesa.identificacao}}</div>
+      <div class="col-6 col-sm-3 adcionar">
+        <button type="button" class="btn btn-dark"
+          routerLink="/Consumo/Mesa/Grupo/{{wrapperConsumo.msgSaida[0].mesa.id}}">
+          <i class="bi bi-cart-plus"></i></button>
+        <button type="button" class="btn btn-dark" routerLink="/">
+          <i class="bi bi-arrow-left-square"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Total: R{{wrapperConsumo.msgSaida[0].total | currency}}</h5>
+    <p class="card-text">
+      <ng-container *ngIf="wrapperConsumo.msgSaida[0] == null">
+        <div class="alert alert-warning text-center" role="alert">
+          Mesa sem Consumo
+        </div>
+      </ng-container>
+      <ng-container *ngIf="wrapperConsumo.msgSaida != null">
+        <div class="list-group mb-1" *ngFor="let consumo of wrapperConsumo.msgSaida[0].consumos"
+          routerLink="/Consumo/{{consumo.id}}">
+          <div class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ consumo.mercadoria.nome | uppercase}}</h5>
+              <small>R{{ consumo.mercadoria.valor | currency }}</small>
+            </div>
+            <p class="mb-1"><span [ngClass]="{'danger':consumo.valor !=0 }"
+                *ngFor="let componente of consumo.componentes"> [ {{ componente.descricao | lowercase}} ] </span></p>
+            <small>Consumidor: {{ consumo.consumidor}}</small>
+          </div>
+        </div>
+      </ng-container>
+    </p>
+
+  </div>
+</div>

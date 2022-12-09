@@ -1,0 +1,3 @@
+<ul class="list-group" *ngFor="let mesa of wrapper.msgSaida[0]">
+  <li class="list-group-item" [ngClass]="mesa.situacao ==1? 'list-group-item-danger' : ''" routerLink="Consumo/Mesa/{{ mesa.id}}">{{ mesa.identificacao }}</li>
+</ul>
