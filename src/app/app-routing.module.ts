@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GrupoComponent } from './consumo/grupo/grupo.component';
 import { MercadoriasComponent } from './consumo/mercadorias/mercadorias.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
+import { AdicionarComponent } from './cardapio/adicionar/adicionar.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path:'Consumo/Mesa/Grupo/:id', component: GrupoComponent },
     {path:'Consumo/Mesa/:idMesa/:idGrupo', component: MercadoriasComponent},
     {path:'Cardapio', component: CardapioComponent},
+    {path:'Cardapio/Adicionar/:idHashGrupo', component: AdicionarComponent},
 ];
 
 @NgModule({
