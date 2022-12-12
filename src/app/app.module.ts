@@ -14,6 +14,7 @@ import { MercadoriasComponent } from './consumo/mercadorias/mercadorias.componen
 import { MercadoriaComponent } from './consumo/mercadoria/mercadoria.component';
 import { DetalheComponent } from './consumo/detalhe/detalhe.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
+import { AdicionarComponent } from './cardapio/adicionar/adicionar.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { CardapioComponent } from './cardapio/cardapio.component';
     MercadoriaComponent,
     DetalheComponent,
     CardapioComponent,
+    AdicionarComponent,
 
   ],
   imports: [
