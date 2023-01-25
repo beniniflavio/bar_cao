@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   barcao:
-    image: barcao/api
+    image: barcao/frontend:20221212
     restart: always
     build: .
     ports:

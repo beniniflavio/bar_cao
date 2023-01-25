@@ -1,0 +1,39 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/Cardapio">Cardapio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ticket</li>
+  </ol>
+</nav>
+<h2> Abrir Ticket</h2>
+
+<ng-container *ngIf="success">
+  <div class="alert alert-success text-center" role="alert">
+    Mesa aberta com sucesso
+
+    <ngx-qrcode  [elementType]="elementType"  [errorCorrectionLevel]="correctionLevel"  [value]="value"  cssClass="bshadow"></ngx-qrcode>
+
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!success">
+<form class="row g-3" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="mesaform" class="form-label">Mesa</label>
+    <select class="form-select form-control" aria-label="Default select example" id="mesaform" required
+      formControlName="mesa">
+      <option selected>Abra e selecione</option>
+      <option *ngFor="let item of wrapperMesa.msgSaida[0]" [value]="item.id">{{ item.identificacao }}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="acesso" class="form-label">Chave</label>
+    <input type="text" class="form-control" id="chave" formControlName="chave"  required [maxLength]="4" size="4">
+  </div>
+
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </div>
+</form>
+</ng-container>

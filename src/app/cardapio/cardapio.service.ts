@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class CardapioService {
 
-  private readonly API = 'http://192.168.0.7:8088/api/v1/Cardapio';
+  private readonly API = 'http://192.168.0.172:8088/api/v1/Cardapio';
 
-  private readonly APIGrupos = 'http://192.168.0.7:8088/api/v1/Grupo';
+  private readonly APIGrupos = 'http://192.168.0.172:8088/api/v1/Grupo';
 
 
   constructor(private httpClient:HttpClient) {

@@ -8,8 +8,8 @@ import { HttpHeaders } from '@angular/common/http';
 export class DetalheService {
 
 
-  private readonly API = 'http://192.168.0.7:8088/api/v1/Consumo/';
-  private readonly ApiAtualizaConsumo = 'http://192.168.0.7:8088/api/v1/Consumo/Update';
+  private readonly API = 'http://192.168.0.172:8088/api/v1/Consumo/';
+  private readonly ApiAtualizaConsumo = 'http://192.168.0.172:8088/api/v1/Consumo/Update';
 
   constructor(private  httpClient: HttpClient) { }
 

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MesasService {
-  private readonly API = 'http://192.168.0.7:8088/api/v1/Mesa';
+  private readonly API = 'http://192.168.0.172:8088/api/v1/Mesa';
 
   constructor(private  httpClient: HttpClient) { }
 
