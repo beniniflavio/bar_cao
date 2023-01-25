@@ -14,11 +14,11 @@ export class AdicionarService {
 
   private status:any;
 
-  private readonly API = 'http://192.168.0.7:8088/api/v1/Cardapio/Adicionar/';
+  private readonly API = 'http://192.168.0.172:8088/api/v1/Cardapio/Adicionar/';
 
-  private readonly APISetCardapio = 'http://192.168.0.7:8088/api/v1/Cardapio/Adicionar/';
+  private readonly APISetCardapio = 'http://192.168.0.172:8088/api/v1/Cardapio/Adicionar/';
 
-  private readonly APICardapio = 'http://192.168.0.7:8088/api/v1/Cardapio/getAdicionar/';
+  private readonly APICardapio = 'http://192.168.0.172:8088/api/v1/Cardapio/getAdicionar/';
 
 
   constructor(private httpClient: HttpClient) {}

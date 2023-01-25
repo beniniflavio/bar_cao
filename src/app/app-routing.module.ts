@@ -8,6 +8,8 @@ import { GrupoComponent } from './consumo/grupo/grupo.component';
 import { MercadoriasComponent } from './consumo/mercadorias/mercadorias.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { AdicionarComponent } from './cardapio/adicionar/adicionar.component';
+import { TicketComponent} from './cardapio/ticket/ticket.component';
+import { MesaComponent } from './mesa/mesa.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
     {path:'Consumo/Mesa/:idMesa/:idGrupo', component: MercadoriasComponent},
     {path:'Cardapio', component: CardapioComponent},
     {path:'Cardapio/Adicionar/:idHashGrupo', component: AdicionarComponent},
+    {path:'Cardapio/Ticket', component: TicketComponent},
+    {path:'Mesa/:idMesa', component: MesaComponent},
 ];
 
 @NgModule({

@@ -35,13 +35,13 @@
           <ng-container *ngIf="item.checked  == 'Checked'">
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked
-                (click)="setItemCardapio(item.idhash, item.checked)">
+                (click)="setItemCardapio(item.idhash, '1')">
             </div>
           </ng-container>
           <ng-container *ngIf="item.checked  != 'Checked'">
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
-                (click)="setItemCardapio(item.idhash, item.checked)">
+                (click)="setItemCardapio(item.idhash, 'unchecked')">
             </div>
           </ng-container>
         </td>

@@ -1,6 +1,8 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,10 @@ import { MercadoriaComponent } from './consumo/mercadoria/mercadoria.component';
 import { DetalheComponent } from './consumo/detalhe/detalhe.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { AdicionarComponent } from './cardapio/adicionar/adicionar.component';
+import { RegistroComponent } from './consumo/registro/registro.component';
+import { TicketComponent } from './cardapio/ticket/ticket.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MesaComponent } from './mesa/mesa.component';
 
 
 @NgModule({
@@ -31,12 +37,17 @@ import { AdicionarComponent } from './cardapio/adicionar/adicionar.component';
     DetalheComponent,
     CardapioComponent,
     AdicionarComponent,
-
+    RegistroComponent,
+    TicketComponent,
+    MesaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxQRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
