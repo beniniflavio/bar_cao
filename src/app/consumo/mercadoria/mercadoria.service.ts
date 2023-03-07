@@ -11,11 +11,11 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class MercadoriaService {
 
-  private readonly API = 'http://192.168.0.172:8088/api/v1/Mercadoria/';
+  private readonly API = 'http://192.168.0.172:8081/api/v1/Mercadoria/';
 
 
-  private readonly APIConsumo = 'http://192.168.0.172:8088/api/v1/Consumo/Get/';
-  private readonly ApiInsertConsumo = 'http://192.168.0.172:8088/api/v1/Consumo/Insert';
+  private readonly APIConsumo = 'http://192.168.0.172:8081/api/v1/Consumo/Get/';
+  private readonly ApiInsertConsumo = 'http://192.168.0.172:8081/api/v1/Consumo/Insert';
 
   status:any;
 

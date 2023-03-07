@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class MesaAcesoService {
 
-  baseURL: string = "http://192.168.0.172:8088/api/v1/Cardapio/Acesso";
+  baseURL: string = "http://192.168.0.172:8081/api/v1/Cardapio/Acesso";
 
   status:any;
 

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class MercadoriasService {
 
 
-  private readonly API = 'http://192.168.0.172:8088/api/v1/Consumo/Grupo/Mercadorias/';
+  private readonly API = 'http://192.168.0.172:8081/api/v1/Consumo/Grupo/Mercadorias/';
 
   constructor(private  httpClient:HttpClient) { }
 

@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 
 export class TicketService {
 
-  baseURL: string = "http://192.168.0.172:8088/api/v1/Cardapio/Ticket";
+  baseURL: string = "http://192.168.0.172:8081/api/v1/Cardapio/Ticket";
 
   status:any;
 

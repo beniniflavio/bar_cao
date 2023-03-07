@@ -22,7 +22,7 @@ export class TicketComponent implements OnInit {
 
   elementType = NgxQrcodeElementTypes.URL;
   correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH;
-  value="http://localhost:4200/Mesa/";
+  value="http://192.168.0.172:4200/Mesa/";
 
   wrapperMesa: any;
 

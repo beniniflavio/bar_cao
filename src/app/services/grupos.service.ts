@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class GruposService {
 
-  private readonly API = 'http://192.168.0.172:8088/api/v1/Grupo';
+  private readonly API = 'http://192.168.0.172:8081/api/v1/Grupo';
 
-  private readonly APIGRUPO = 'http://192.168.0.172:8088/api/v1/Grupo/';
+  private readonly APIGRUPO = 'http://192.168.0.172:8081/api/v1/Grupo/';
 
   constructor(private  httpClient:HttpClient) { }
 
